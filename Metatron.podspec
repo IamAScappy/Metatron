@@ -11,5 +11,5 @@ Pod::Spec.new do |s|
     s.tvos.deployment_target    = '9.0'
     s.library                   = "z"
     s.source                    = { :git => "https://github.com/almazrafi/Metatron.git", :tag => s.version.to_s }
-    s.source_files              = "Metatron/**/*.swift"
+    s.source_files              = "Sources/**/*.swift"
 end
