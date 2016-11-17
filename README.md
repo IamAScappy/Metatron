@@ -52,7 +52,7 @@ to learn more.
 
 ## Usage
 
-To open a mp3 file for writing:
+To open a MPEG media file for reading and writing:
 ```swift
 do
 {
