@@ -68,7 +68,7 @@ do
     print("Version: " + String(describing: media.version))
     print("Layer: " + String(describing: media.layer))
 
-    print("Duration: " + String(media.duration))
+    print("Duration (seconds): " + String(media.duration / 1000.0))
 
     print("Bit rate: " + String(media.bitRate))
     print("Sample rate: " + String(describing: media.sampleRate))
