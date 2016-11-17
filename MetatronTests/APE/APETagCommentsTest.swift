@@ -1,0 +1,508 @@
+//
+//  APETagCommentsTest.swift
+//  Metatron
+//
+//  Created by Almaz Ibragimov on 15.09.16.
+//  Copyright © 2016 Almazrafi. All rights reserved.
+//
+
+import XCTest
+
+@testable import Metatron
+
+class APETagCommentsTest: XCTestCase {
+
+    // MARK: Instance Methods
+
+    func test() {
+        let tag = APETag()
+
+        do {
+            let value: [String] = []
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            XCTAssert(tag["Comment"] == nil)
+
+            do {
+                tag.version = APEVersion.v1
+
+                XCTAssert(tag.toData() == nil)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                XCTAssert(tag.toData() == nil)
+            }
+
+            guard let item = tag.appendItem("Comment") else {
+                return XCTFail()
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = [""]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == [])
+
+            XCTAssert(tag["Comment"] == nil)
+
+            do {
+                tag.version = APEVersion.v1
+
+                XCTAssert(tag.toData() == nil)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                XCTAssert(tag.toData() == nil)
+            }
+
+            guard let item = tag.appendItem("Comment") else {
+                return XCTFail()
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == [])
+        }
+
+        do {
+            let value = ["Abc 123"]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = ["Абв 123"]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = ["Abc 1", "Abc 2"]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = ["", "Abc 2"]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = ["Abc 1", ""]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = ["", ""]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = [Array<String>(repeating: "Abc", count: 123).joined(separator: "\n")]
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        do {
+            let value = Array<String>(repeating: "Abc", count: 123)
+
+            tag.comments = value
+
+            XCTAssert(tag.comments == value)
+
+            guard let item = tag["Comment"] else {
+                return XCTFail()
+            }
+
+            guard let itemValue = item.stringListValue else {
+                return XCTFail()
+            }
+
+            XCTAssert(itemValue == value)
+
+            do {
+                tag.version = APEVersion.v1
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            do {
+                tag.version = APEVersion.v2
+
+                guard let data = tag.toData() else {
+                    return XCTFail()
+                }
+
+                guard let other = APETag(fromData: data) else {
+                    return XCTFail()
+                }
+
+                XCTAssert(other.comments == value)
+            }
+
+            item.stringListValue = value
+
+            XCTAssert(tag.comments == value)
+        }
+
+        guard let item = tag.appendItem("Comment") else {
+            return XCTFail()
+        }
+
+        do {
+            item.value = [UInt8](String("Abc 1\0Abc 2").utf8)
+
+            XCTAssert(tag.comments == ["Abc 1", "Abc 2"])
+        }
+
+        do {
+            item.value = [UInt8](String("\0Abc 2").utf8)
+
+            XCTAssert(tag.comments == ["", "Abc 2"])
+        }
+
+        do {
+            item.value = [UInt8](String("Abc 1\0").utf8)
+
+            XCTAssert(tag.comments == ["Abc 1", ""])
+        }
+
+        do {
+            item.value = [0]
+
+            XCTAssert(tag.comments == ["", ""])
+        }
+    }
+}
