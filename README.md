@@ -33,15 +33,11 @@ to learn more.
     ```ruby
     use_frameworks!
 
-    pod 'Metatron', '~> 1.0.0'
+    target 'YourProjectName' do
+        pod 'Metatron'
+    end
     ```
-
-    If you want to be on the bleeding edge, replace the last line with:
-
-    ```ruby
-    pod 'Metatron', :git => 'https://github.com/almazrafi/Metatron.git'
-    ```
-
+    
 2. Run `pod install` and open the `.xcworkspace` file to launch Xcode.
 
 3. Import the Metatron framework.
@@ -53,96 +49,97 @@ to learn more.
 ## Usage
 
 To open a MPEG media file for reading and writing:
-```swift
-do
-{
-    // Open the MPEG media from file path
 
-    let media = try MPEGMedia(fromFilePath: "sample.mp3", readOnly: false)
+    ```swift
+    do {
+        // Open the MPEG media from file path
 
-    // Use MPEGMedia(fromData: [UInt8], readOnly: Bool) to load from memory
+        let media = try MPEGMedia(fromFilePath: "sample.mp3", readOnly: false)
 
-
-    // Get MPEG properties
-
-    print("Version: " + String(describing: media.version))
-    print("Layer: " + String(describing: media.layer))
-
-    print("Duration (seconds): " + String(media.duration / 1000.0))
-
-    print("Bit rate: " + String(media.bitRate))
-    print("Sample rate: " + String(describing: media.sampleRate))
-
-    print("Channels: " + String(media.channels))
-
-    print("Bit rate mode: " + String(describing: media.bitRateMode))
-    print("Channel mode: " + String(describing: media.channelMode))
+        // Use MPEGMedia(fromData: [UInt8], readOnly: Bool) to load from memory
 
 
-    // Get Tag information
+        // Get MPEG properties
 
-    print("Title: " + media.title)
-    print("Artists: " + media.artists.joined(separator: " & "))
+        print("Version: " + String(describing: media.version))
+        print("Layer: " + String(describing: media.layer))
 
-    print("Album: " + media.album)
-    print("Genres: " + media.genres.joined(separator: "/"))
+        print("Duration (seconds): " + String(media.duration / 1000.0))
 
-    print("Release date: " + String(describing: media.releaseDate))
+        print("Bit rate: " + String(media.bitRate))
+        print("Sample rate: " + String(describing: media.sampleRate))
 
-    print("Track number: " + String(describing: media.trackNumber))
-    print("Disc number: " + String(describing: media.discNumber))
+        print("Channels: " + String(media.channels))
 
-    let coverArtImage = UIImage(data: Data(media.coverArt.data))
-
-    print("Copyrights: " + media.copyrights.joined(separator: "\n"))
-    print("Comments: " + media.comments.joined(separator: "\n"))
-
-    print("Lyrics: " + String(describing: media.lyrics))
+        print("Bit rate mode: " + String(describing: media.bitRateMode))
+        print("Channel mode: " + String(describing: media.channelMode))
 
 
-    // Write Tag information
+        // Get Tag information
 
-    media.title = "Title"
-    media.artists = ["Artist"]
+        print("Title: " + media.title)
+        print("Artists: " + media.artists.joined(separator: " & "))
 
-    media.album = "Album"
-    media.genres = ["Genre"]
+        print("Album: " + media.album)
+        print("Genres: " + media.genres.joined(separator: "/"))
 
-    media.releaseDate = TagDate(year: 2016, month: 11, day: 17)
+        print("Release date: " + String(describing: media.releaseDate))
 
-    media.trackNumber = TagNumber(3, total: 4)
-    media.discNumber = TagNumber(1)
+        print("Track number: " + String(describing: media.trackNumber))
+        print("Disc number: " + String(describing: media.discNumber))
 
-    if let newCoverArtImage = UIImage(contentsOfFile: "sample.png") {
-        if let pngRepresentation = UIImagePNGRepresentation(newCoverArtImage) {
-            media.coverArt = TagImage(data: [UInt8](pngRepresentation))
+        let coverArtImage = UIImage(data: Data(media.coverArt.data))
+
+        print("Copyrights: " + media.copyrights.joined(separator: "\n"))
+        print("Comments: " + media.comments.joined(separator: "\n"))
+
+        print("Lyrics: " + String(describing: media.lyrics))
+
+
+        // Write Tag information
+
+        media.title = "Title"
+        media.artists = ["Artist"]
+
+        media.album = "Album"
+        media.genres = ["Genre"]
+
+        media.releaseDate = TagDate(year: 2016, month: 11, day: 17)
+
+        media.trackNumber = TagNumber(3, total: 4)
+        media.discNumber = TagNumber(1)
+
+        if let newCoverArtImage = UIImage(contentsOfFile: "sample.png") {
+            if let pngRepresentation = UIImagePNGRepresentation(newCoverArtImage) {
+                media.coverArt = TagImage(data: [UInt8](pngRepresentation))
+            }
         }
+
+        media.copyrights = ["Copyright"]
+        media.comments = ["Comment"]
+
+        media.lyrics = TagLyrics(pieces: [TagLyrics.Piece("Lyrics text piece", timeStamp: 1230)])
+
+
+        // Save the information to the mp3 file
+
+        if !media.save() {
+            print("The file is corrupted and cannot be saved or it is read only.")
+        }
+
+    } catch MediaError.invalidFormat {
+        print("The file is not an MPEG file.")
+
+    } catch MediaError.invalidFile {
+        print("The file does not exist.")
+
+    } catch MediaError.invalidData {
+        print("The file or data is empty.")
+
+    } catch {
+        print("Unknown error")
     }
-
-    media.copyrights = ["Copyright"]
-    media.comments = ["Comment"]
-
-    media.lyrics = TagLyrics(pieces: [TagLyrics.Piece("Lyrics text piece", timeStamp: 1230)])
-
-
-    // Save the information to the mp3 file
-
-    if !media.save() {
-        print("The file is corrupted and cannot be saved or it is read only.")
-    }
-
-} catch MediaError.invalidFormat {
-    print("The file is not an MPEG file.")
-
-} catch MediaError.invalidFile {
-    print("The file does not exist.")
-
-} catch MediaError.invalidData {
-    print("The file or data is empty.")
-
-} catch {
-    print("Unknown error")
-}
-```
+    ```
+    
 ## License
 Metatron and its assets are released under the [Apache Version 2.0 License](LICENSE.md)
