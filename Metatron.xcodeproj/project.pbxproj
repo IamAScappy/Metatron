@@ -7,14 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C05F92951DDDDEC70073E56C /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C05F92941DDDDEC70073E56C /* Info.plist */; };
 		C06D67A31DDD835D00AE57AC /* MediaDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C06D67A21DDD835D00AE57AC /* MediaDetailsViewController.swift */; };
 		C08104EA1DDDD206003696E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D6AD51DDAE6C600C7E9A0 /* libz.tbd */; };
-		C08104EE1DDDD206003696E1 /* Metatron.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */; };
 		C081055A1DDDD221003696E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D6AD51DDAE6C600C7E9A0 /* libz.tbd */; };
-		C081055E1DDDD221003696E1 /* Metatron.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */; };
 		C08105CA1DDDD4CF003696E1 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D6AD51DDAE6C600C7E9A0 /* libz.tbd */; };
-		C08105CE1DDDD4CF003696E1 /* Metatron.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */; };
 		C09D6AD61DDAE6C600C7E9A0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = C09D6AD51DDAE6C600C7E9A0 /* libz.tbd */; };
 		C0BE07C91DDE22EC002324BB /* APEHeaderTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE07B91DDE22EC002324BB /* APEHeaderTest.swift */; };
 		C0BE07CA1DDE22EC002324BB /* APEItemTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE07BA1DDE22EC002324BB /* APEItemTest.swift */; };
@@ -142,7 +138,6 @@
 		C0BE08B01DDE23A0002324BB /* TagTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE08A61DDE23A0002324BB /* TagTimeTest.swift */; };
 		C0BE08B31DDE23B1002324BB /* ExtensionsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE08B11DDE23B1002324BB /* ExtensionsTest.swift */; };
 		C0BE08B41DDE23B1002324BB /* ZLibTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0BE08B21DDE23B1002324BB /* ZLibTest.swift */; };
-		C0BE08B61DDE23C4002324BB /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C0BE08B51DDE23C4002324BB /* Info.plist */; };
 		C0D9E2B31DDCB1B500C17723 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9E2B21DDCB1B500C17723 /* AppDelegate.swift */; };
 		C0D9E2B51DDCB1B500C17723 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0D9E2B41DDCB1B500C17723 /* ViewController.swift */; };
 		C0D9E2B71DDCB1B500C17723 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C0D9E2B61DDCB1B500C17723 /* Assets.xcassets */; };
@@ -553,7 +548,6 @@
 		C0E10E101DDE20D600682835 /* TagNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E10DCF1DDE20D200682835 /* TagNumber.swift */; };
 		C0E10E111DDE20D600682835 /* TagPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E10DD01DDE20D200682835 /* TagPeriod.swift */; };
 		C0E10E121DDE20D600682835 /* TagTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0E10DD11DDE20D200682835 /* TagTime.swift */; };
-		C0FDDAE11DDC1AE500AD56F6 /* Metatron.podspec in Resources */ = {isa = PBXBuildFile; fileRef = C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -581,6 +575,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		C029EB6A1DDE3146005C2833 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C0338D5B1DDAE32C000046CA /* Metatron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metatron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0338D641DDAE32D000046CA /* MetatronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetatronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F92941DDDDEC70073E56C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -907,6 +902,7 @@
 				C09D6AD41DDAE6C600C7E9A0 /* Frameworks */,
 				C09D6BE11DDAE9A800C7E9A0 /* LICENSE */,
 				C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */,
+				C029EB6A1DDE3146005C2833 /* Package.swift */,
 				C09D6BE21DDAE9A800C7E9A0 /* README.md */,
 			);
 			sourceTree = "<group>";
@@ -1615,7 +1611,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0FDDAE11DDC1AE500AD56F6 /* Metatron.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1631,7 +1626,6 @@
 				C0BE08241DDE2326002324BB /* broken_frame.id3 in Resources */,
 				C0BE08841DDE236F002324BB /* ape_tag.mp3 in Resources */,
 				C0BE08871DDE236F002324BB /* excessive_alloc.mp3 in Resources */,
-				C0BE08B61DDE23C4002324BB /* Info.plist in Resources */,
 				C0BE08821DDE236F002324BB /* ape_id3v1_tags.mp3 in Resources */,
 				C0BE08831DDE236F002324BB /* ape_id3v2_tags.mp3 in Resources */,
 				C0BE08251DDE2326002324BB /* frame_length_v4.id3 in Resources */,
@@ -1641,7 +1635,6 @@
 				C0BE088E1DDE236F002324BB /* xing_header_cbr.mp3 in Resources */,
 				C0BE08861DDE236F002324BB /* double_id3v2_tag.mp3 in Resources */,
 				C0BE08261DDE2326002324BB /* unsynchronised.id3 in Resources */,
-				C05F92951DDDDEC70073E56C /* Info.plist in Resources */,
 				C0BE08851DDE236F002324BB /* broken_length.mp3 in Resources */,
 				C0BE088A1DDE236F002324BB /* invalid_frames_3.mp3 in Resources */,
 				C0BE08901DDE236F002324BB /* xing_header_vbr.mp3 in Resources */,
@@ -1652,7 +1645,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08104EE1DDDD206003696E1 /* Metatron.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1660,7 +1652,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C081055E1DDDD221003696E1 /* Metatron.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1668,7 +1659,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C08105CE1DDDD4CF003696E1 /* Metatron.podspec in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
