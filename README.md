@@ -89,7 +89,7 @@ do {
     print("Duration (seconds): " + String(media.duration / 1000.0))
 
     print("Bit rate: " + String(media.bitRate))
-    print("Sample rate: " + String(describing: media.sampleRate))
+    print("Sample rate: " + String(media.sampleRate))
 
     print("Channels: " + String(media.channels))
 
