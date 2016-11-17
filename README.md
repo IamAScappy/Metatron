@@ -50,5 +50,99 @@ to learn more.
     import Metatron
     ```
 
+## Usage
+
+To open a mp3 file for writing:
+```swift
+do
+{
+    // Open the MPEG media from file path
+
+    let media = try MPEGMedia(fromFilePath: "sample.mp3", readOnly: false)
+
+    // Use MPEGMedia(fromData: [UInt8], readOnly: Bool) to load from memory
+
+
+    // Get MPEG properties
+
+    print("Version: " + String(describing: media.version))
+    print("Layer: " + String(describing: media.layer))
+
+    print("Duration: " + String(media.duration))
+
+    print("Bit rate: " + String(media.bitRate))
+    print("Sample rate: " + String(describing: media.sampleRate))
+
+    print("Channels: " + String(media.channels))
+
+    print("Bit rate mode: " + String(describing: media.bitRateMode))
+    print("Channel mode: " + String(describing: media.channelMode))
+
+
+    // Get Tag information
+
+    print("Title: " + media.title)
+    print("Artists: " + media.artists.joined(separator: " & "))
+
+    print("Album: " + media.album)
+    print("Genres: " + media.genres.joined(separator: "/"))
+
+    print("Release date: " + String(describing: media.releaseDate))
+
+    print("Track number: " + String(describing: media.trackNumber))
+    print("Disc number: " + String(describing: media.discNumber))
+
+    let coverArtImage = UIImage(data: Data(media.coverArt.data))
+
+    print("Copyrights: " + media.copyrights.joined(separator: "\n"))
+    print("Comments: " + media.comments.joined(separator: "\n"))
+
+    print("Lyrics: " + String(describing: media.lyrics))
+
+
+    // Write Tag information
+
+    media.title = "Title"
+    media.artists = ["Artist"]
+
+    media.album = "Album"
+    media.genres = ["Genre"]
+
+    media.releaseDate = TagDate(year: 2016, month: 11, day: 17)
+
+    media.trackNumber = TagNumber(3, total: 4)
+    media.discNumber = TagNumber(1)
+
+    if let newCoverArtImage = UIImage(contentsOfFile: "sample.png") {
+        if let pngRepresentation = UIImagePNGRepresentation(newCoverArtImage) {
+            media.coverArt = TagImage(data: [UInt8](pngRepresentation))
+        }
+    }
+
+    media.copyrights = ["Copyright"]
+    media.comments = ["Comment"]
+
+    media.lyrics = TagLyrics(pieces: [TagLyrics.Piece("Lyrics text piece", timeStamp: 1230)])
+
+
+    // Save the information to the mp3 file
+
+    if !media.save() {
+        print("The file is corrupted and cannot be saved or it is read only.")
+    }
+
+} catch MediaError.invalidFormat {
+    print("The file is not an MPEG file.")
+
+} catch MediaError.invalidFile {
+    print("The file does not exist.")
+
+} catch MediaError.invalidData {
+    print("The file or data is empty.")
+
+} catch {
+    print("Unknown error")
+}
+```
 ## License
 Metatron and its assets are released under the [Apache Version 2.0 License](LICENSE.md)
