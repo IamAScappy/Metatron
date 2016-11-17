@@ -46,8 +46,30 @@ to learn more.
     import Metatron
     ```
 
-## Usage
+### Install Using Swift Package Manager
+The [Swift Package Manager](https://swift.org/package-manager/) is a
+decentralized dependency manager for Swift.
 
+1. Add the project to your `Package.swift`.
+
+    ```swift
+    import PackageDescription
+
+    let package = Package(
+        name: "YourProjectName",
+        dependencies: [
+            .Package(url: "https://github.com/almazrafi/Metatron.git", majorVersion: 1)
+        ]
+    )
+    ```
+
+2. Import the Metatron module.
+
+    ```swift
+    import Metatron
+    ```
+
+## Usage
 To open a MPEG media file for reading and writing:
 
 ```swift
