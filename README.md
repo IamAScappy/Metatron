@@ -1,3 +1,5 @@
+# Metatron
+
 <p align="center">
     <img src="https://img.shields.io/cocoapods/p/Metatron.svg?style=flat"
          alt="Platform">
@@ -21,11 +23,10 @@
 
 <p align="center">
     <a href="#installation">Installation</a>
-    <a href="#usage">Usage</a>
-    <a href="#license">License</a>
+  • <a href="#usage">Usage</a>
+  • <a href="#license">License</a>
 </p>
 
-# Metatron
 ## Description:
 Metatron is a Swift framework that edits meta-information of audio files. Currently it supports:
 
