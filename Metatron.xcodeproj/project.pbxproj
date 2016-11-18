@@ -575,7 +575,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C029EB6A1DDE3146005C2833 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		C0338D5B1DDAE32C000046CA /* Metatron.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Metatron.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0338D641DDAE32D000046CA /* MetatronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MetatronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C05F92941DDDDEC70073E56C /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -902,7 +901,6 @@
 				C09D6AD41DDAE6C600C7E9A0 /* Frameworks */,
 				C09D6BE11DDAE9A800C7E9A0 /* LICENSE */,
 				C0FDDAE01DDC1AE500AD56F6 /* Metatron.podspec */,
-				C029EB6A1DDE3146005C2833 /* Package.swift */,
 				C09D6BE21DDAE9A800C7E9A0 /* README.md */,
 			);
 			sourceTree = "<group>";

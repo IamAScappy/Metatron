@@ -70,28 +70,6 @@ Metatron is a Swift framework that edits meta-information of audio files. Curren
     import Metatron
     ```
 
-### Swift Package Manager
-The [Swift Package Manager](https://swift.org/package-manager/) is a decentralized dependency manager for Swift projects.
-
-1. Add the project to your `Package.swift`.
-
-    ```swift
-    import PackageDescription
-
-    let package = Package(
-        name: "YourProjectName",
-        dependencies: [
-            .Package(url: "https://github.com/almazrafi/Metatron.git", majorVersion: 1)
-        ]
-    )
-    ```
-
-2. Import the Metatron framework.
-
-    ```swift
-    import Metatron
-    ```
-
 ### Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Objective-C and Swift projects.
 
