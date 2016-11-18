@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
     s.name                      = "Metatron"
-    s.version                   = "1.0.0"
+    s.version                   = "1.0.1"
     s.summary                   = "Swift framework that edits meta-information of audio files"
     s.homepage                  = "https://github.com/almazrafi/Metatron"
     s.license                   = { :type => "Apache 2.0", :file => "LICENSE" }
