@@ -1,3 +1,30 @@
+<p align="center">
+    <img src="https://img.shields.io/cocoapods/p/Metatron.svg?style=flat"
+         alt="Platform">
+
+    <img src="https://img.shields.io/badge/language-swift-orange.svg"
+         alt="Language: Swift">
+
+    <a href="https://cocoapods.org/pods/Metatron">
+        <img src="https://img.shields.io/cocoapods/v/Metatron.svg"
+             alt="CocoaPods Compatible">
+    </a>
+
+    <a href="https://github.com/Carthage/Carthage">
+        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
+             alt="Carthage Compatible">
+    </a>
+
+    <img src="https://img.shields.io/github/license/almazrafi/metatron.svg"
+         alt="License">
+</p>
+
+<p align="center">
+    <a href="#installation">Installation</a>
+    <a href="#usage">Usage</a>
+    <a href="#license">License</a>
+</p>
+
 # Metatron
 ## Description:
 Metatron is a Swift framework that edits meta-information of audio files. Currently it supports:
@@ -23,17 +50,15 @@ Metatron is a Swift framework that edits meta-information of audio files. Curren
 - Xcode 8.0
 - Swift 3.0
 
-### Install Using CocoaPods
-[CocoaPods](https://cocoapods.org/) is a centralized dependency manager for
-Objective-C and Swift. Go [here](https://guides.cocoapods.org/using/index.html)
-to learn more.
+### CocoaPods
+[CocoaPods](https://cocoapods.org/) is a centralized dependency manager for Objective-C and Swift projects. Go [here](https://guides.cocoapods.org/using/index.html) to learn more.
 
 1. Add the project to your [Podfile](https://guides.cocoapods.org/using/the-podfile.html).
 
     ```ruby
     use_frameworks!
 
-    target 'YourProjectName' do
+    target '<Your Target Name>' do
         pod 'Metatron'
     end
     ```
@@ -46,9 +71,8 @@ to learn more.
     import Metatron
     ```
 
-### Install Using Swift Package Manager
-The [Swift Package Manager](https://swift.org/package-manager/) is a
-decentralized dependency manager for Swift.
+### Swift Package Manager
+The [Swift Package Manager](https://swift.org/package-manager/) is a decentralized dependency manager for Swift projects.
 
 1. Add the project to your `Package.swift`.
 
@@ -63,7 +87,24 @@ decentralized dependency manager for Swift.
     )
     ```
 
-2. Import the Metatron module.
+2. Import the Metatron framework.
+
+    ```swift
+    import Metatron
+    ```
+
+### Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency manager for Objective-C and Swift projects.
+
+1. Add the project to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+
+    ```
+    github "almazrafi/Metatron"
+    ```
+
+2. Run `carthage update` and follow [the additional steps](https://github.com/Carthage/Carthage#getting-started) in order to add framework to your project.
+
+3. Import the Metatron framework.
 
     ```swift
     import Metatron
