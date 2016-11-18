@@ -182,4 +182,4 @@ do {
 ```
 
 ## License
-Metatron and its assets are released under the [Apache Version 2.0 License](LICENSE)
+Metatron and its assets are released under the [MIT License](LICENSE)
