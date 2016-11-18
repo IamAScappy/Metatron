@@ -1,5 +1,3 @@
-# Metatron
-
 <p align="center">
     <img src="https://img.shields.io/cocoapods/p/Metatron.svg?style=flat"
          alt="Platform">
