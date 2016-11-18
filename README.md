@@ -190,7 +190,7 @@ do {
     }
 
 } catch MediaError.invalidFormat {
-    print("The file is not an MPEG file.")
+    print("The file is not MPEG.")
 
 } catch MediaError.invalidFile {
     print("The file does not exist.")
