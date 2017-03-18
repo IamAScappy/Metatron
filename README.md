@@ -5,16 +5,12 @@
     <img src="https://img.shields.io/badge/language-swift-orange.svg"
          alt="Language: Swift">
 
-    <a href="https://cocoapods.org/pods/Metatron">
-        <img src="https://img.shields.io/cocoapods/v/Metatron.svg"
+    <img src="https://img.shields.io/cocoapods/v/Metatron.svg"
              alt="CocoaPods Compatible">
-    </a>
 
-    <a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
+    <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
              alt="Carthage Compatible">
-    </a>
-
+  
     <img src="https://img.shields.io/github/license/almazrafi/metatron.svg"
          alt="License">
 </p>
