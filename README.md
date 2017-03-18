@@ -21,8 +21,8 @@
 
 <p align="center">
     <a href="#installation">Installation</a>
-  • <a href="#usage">Usage</a>
-  • <a href="#license">License</a>
+    <a href="#usage">Usage</a>
+    <a href="#license">License</a>
 </p>
 
 ## Description:
