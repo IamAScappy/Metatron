@@ -1,21 +1,4 @@
 <p align="center">
-    <img src="https://img.shields.io/cocoapods/p/Metatron.svg?style=flat"
-         alt="Platform">
-
-    <img src="https://img.shields.io/badge/language-swift-orange.svg"
-         alt="Language: Swift">
-
-    <img src="https://img.shields.io/cocoapods/v/Metatron.svg"
-             alt="CocoaPods Compatible">
-
-    <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
-             alt="Carthage Compatible">
-  
-    <img src="https://img.shields.io/github/license/almazrafi/metatron.svg"
-         alt="License">
-</p>
-
-<p align="center">
     <a href="#installation">Installation</a>
     <a href="#usage">Usage</a>
     <a href="#license">License</a>
