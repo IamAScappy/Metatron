@@ -1,32 +1,11 @@
 <p align="center">
-    <img src="https://img.shields.io/cocoapods/p/Metatron.svg?style=flat"
-         alt="Platform">
-
-    <img src="https://img.shields.io/badge/language-swift-orange.svg"
-         alt="Language: Swift">
-
-    <a href="https://cocoapods.org/pods/Metatron">
-        <img src="https://img.shields.io/cocoapods/v/Metatron.svg"
-             alt="CocoaPods Compatible">
-    </a>
-
-    <a href="https://github.com/Carthage/Carthage">
-        <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat"
-             alt="Carthage Compatible">
-    </a>
-
-    <img src="https://img.shields.io/github/license/almazrafi/metatron.svg"
-         alt="License">
-</p>
-
-<p align="center">
     <a href="#installation">Installation</a>
-  • <a href="#usage">Usage</a>
-  • <a href="#license">License</a>
+    <a href="#usage">Usage</a>
+    <a href="#license">License</a>
 </p>
 
 ## Description:
-Metatron is a Swift framework that edits meta-information of audio files. Currently it supports:
+Metatron is a Swift framework for editing meta-information of audio files. Currently it supports:
 
 **Tags:**
 - ID3v1 Tag (v1.0, v1.1, vExt1.0, vExt1.1)
