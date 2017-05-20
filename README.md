@@ -5,7 +5,7 @@
 </p>
 
 ## Description:
-Metatron is a Swift framework that edits meta-information of audio files. Currently it supports:
+Metatron is a Swift framework for editing meta-information of audio files. Currently it supports:
 
 **Tags:**
 - ID3v1 Tag (v1.0, v1.1, vExt1.0, vExt1.1)
