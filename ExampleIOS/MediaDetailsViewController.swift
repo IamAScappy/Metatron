@@ -85,6 +85,25 @@ class MediaDetailsViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 2:
+            self.titleField.becomeFirstResponder()
+            
+        case 3:
+            self.artistsField.becomeFirstResponder()
+            
+        case 4:
+            self.albumField.becomeFirstResponder()
+            
+        case 5:
+            self.genresField.becomeFirstResponder()
+            
+        default:
+            break
+        }
+    }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ApplyMediaDetails" {

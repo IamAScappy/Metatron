@@ -425,7 +425,7 @@ class ViewController: NSViewController {
             self.sampleRateField.stringValue = String(self.media!.sampleRate)
 
             self.channelsField.stringValue = String(self.media!.channels)
-        } catch let error {
+        } catch {
             let alert = NSAlert()
 
             if let mediaError = error as? MediaError {
