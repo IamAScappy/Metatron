@@ -314,10 +314,6 @@ class APESerialization {
 
         switch dataParts.count {
         case 2:
-            guard timeStamp >= 0 else {
-                return nil
-            }
-
             guard let minutes = UInt(String(bytes: dataParts[0], encoding: String.Encoding.utf8) ?? "") else {
                 return nil
             }
