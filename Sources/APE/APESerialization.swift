@@ -317,8 +317,9 @@ class APESerialization {
             guard let minutes = UInt(String(bytes: dataParts[0], encoding: String.Encoding.utf8) ?? "") else {
                 return nil
             }
+            
 
-            guard minutes < (APESerialization.maxTimeStamp - timeStamp) / 60000 else {
+            guard minutes < (timeStamp.distance(to: APESerialization.maxTimeStamp)) / 60000 else {
                 return nil
             }
 
@@ -329,7 +330,7 @@ class APESerialization {
                 return nil
             }
 
-            guard minutes < (APESerialization.maxTimeStamp - timeStamp) / 60000 else {
+            guard minutes < (timeStamp.distance(to: APESerialization.maxTimeStamp)) / 60000 else {
                 return nil
             }
 
@@ -339,7 +340,7 @@ class APESerialization {
                 return nil
             }
 
-            guard hours < (APESerialization.maxTimeStamp - timeStamp) / 3600000 else {
+            guard hours < (timeStamp.distance(to: APESerialization.maxTimeStamp)) / 3600000 else {
                 return nil
             }
 
